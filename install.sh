@@ -5,7 +5,7 @@ CURRENT=`pwd`
 sudo aptitude install zsh
 
 # Change shell for zsh
-chsh /bin/zsh
+chsh
 
 if [ -f ~/.zshrc ] ; then
     cat ~/.zshrc > ~/zshrc.backup
@@ -14,7 +14,7 @@ if [ -f ~/.zshrc ] ; then
 fi
 
 if [ -f ~/.zshrc_aliases ] ; then
-    cat ~/.zshrc > ~/zshrc_aliases.backup
+    cat ~/.zsh_aliases > ~/zshrc_aliases.backup
     rm -f ~/.zshrc_aliases
     echo "Existing .zshrc_aliases > backup in zshrc_aliases.backup"
 fi
@@ -29,6 +29,6 @@ if [ -f ~/.zshrc ] ; then
     echo "Existing .zshrc > backup in zshrc2.backup (oh-my-zshv)"
 fi
 
-ln -s $CURRENT/zshrc ~/.zshrc
-ln -s $CURRENT/zshrc ~/.sh_aliases
+ln -sf $CURRENT/zshrc ~/.zshrc
+ln -sf $CURRENT/zsh_aliases ~/.zsh_aliases
 
