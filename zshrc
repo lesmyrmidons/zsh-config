@@ -40,5 +40,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
 if [ -f ~/.zsh_aliases ]; then
-    . ~/.sh_aliases
+    . ~/.zsh_aliases
 fi
