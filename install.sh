@@ -26,7 +26,7 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 if [ -f ~/.zshrc ] ; then
     cat ~/.zshrc > ~/zshrc2.backup
     rm -f ~/.zshrc
-    echo "Existing .zshrc > backup in zshrc2.backup (oh-my-zshv)"
+    echo "Existing .zshrc > backup in zshrc2.backup (oh-my-zsh)"
 fi
 
 ln -sf $CURRENT/zshrc ~/.zshrc
