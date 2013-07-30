@@ -20,15 +20,16 @@ if [ -f ~/.zshrc_aliases ] ; then
 fi
 
 # Install oh-my-zsh
-echo "Install Oh My Zsh!"
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+if [ ! -d ~/.oh-my-zsh ] ; then
+    echo "Install Oh My Zsh!"
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-if [ -f ~/.zshrc ] ; then
-    cat ~/.zshrc > ~/zshrc2.backup
-    rm -f ~/.zshrc
-    echo "Existing .zshrc > backup in zshrc2.backup (oh-my-zsh)"
+    if [ -f ~/.zshrc ] ; then
+        cat ~/.zshrc > ~/zshrc2.backup
+        rm -f ~/.zshrc
+        echo "Existing .zshrc > backup in zshrc2.backup (oh-my-zsh)"
+    fi
 fi
 
 ln -sf $CURRENT/zshrc ~/.zshrc
 ln -sf $CURRENT/zsh_aliases ~/.zsh_aliases
-
