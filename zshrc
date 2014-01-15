@@ -32,7 +32,7 @@ DEFAULT_USER="lesmyrmidons"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras composer pip svn symfony2 vagrant ruby mercurial npm node cap)
+plugins=(git git-extras git-flow composer pip svn symfony2 vagrant ruby mercurial npm node cap)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,3 +42,8 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source "/usr/local/bin/virtualenvwrapper.sh"
+export WORKON_HOME=$HOME/virtual_env
