@@ -11,6 +11,14 @@ DEFAULT_USER="lesmyrmidons"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Remove superfluous blanks from each command line being added to the history
+# list
+setopt histreduceblanks
+
+# Don't kill background jobs when I logout
+setopt nohup
+
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -26,24 +34,45 @@ DEFAULT_USER="lesmyrmidons"
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+# Uncomment following line if you want to disable command autocorrection
+DISABLE_CORRECTION="true"
+
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment following line if you want to shown in the command execution time stamp
+# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
+# yyyy-mm-dd
+# HIST_STAMPS="mm/dd/yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras git-flow composer pip svn symfony2 vagrant ruby mercurial npm node cap)
+plugins=(git git-flow git-extras composer pip svn symfony2 vagrant ruby mercurial npm node cap)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export EDITOR='vim'
 
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-source "/usr/local/bin/virtualenvwrapper.sh"
-export WORKON_HOME=$HOME/virtual_env
+#source "/usr/local/bin/virtualenvwrapper.sh"
+#export WORKON_HOME=$HOME/virtual_env
+
+# # Preferred editor for local and remote sessions
+#if [[ -n $SSH_CONNECTION ]]; then
+#    export EDITOR='vim'
+#else
+#    export EDITOR='mvim'
+#fi
