@@ -59,7 +59,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export EDITOR='vim'
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
 
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
