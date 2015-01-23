@@ -5,3 +5,11 @@ alias vi='/usr/bin/vim'
 tailf() {
     tail -f "$*" | ccze -A
 }
+
+chmoddir() {
+    find "$*" -type d -exec chmod 755 {} +
+}
+
+chmodfile() {
+    find "$*" -type f -exec chmod 644 {} +
+}
