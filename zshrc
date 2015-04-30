@@ -68,8 +68,11 @@ fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-#source "/usr/local/bin/virtualenvwrapper.sh"
-#export WORKON_HOME=$HOME/virtual_env
+# source "/usr/local/bin/virtualenvwrapper.sh"
+# export WORKON_HOME=$HOME/virtual_env
+
+export NVM_DIR="/home/lesmyrmidons/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # # Preferred editor for local and remote sessions
 #if [[ -n $SSH_CONNECTION ]]; then
