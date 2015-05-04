@@ -19,3 +19,23 @@ chmoddir() {
 chmodfile() {
     find "$*" -type f -exec chmod 644 {} +
 }
+
+getIdClientFromIdRestaurant () {
+    if [ -z "$1" ]; then
+        echo "Synopsis => getIdClientFromIdRestaurant id_restaurant";
+    elif ! [[ $1 =~ '^[0-9]+$' ]]; then
+        echo "id_restaurant should be an integer";
+    else
+        mysql -e "select id_client from restaurant where id_restaurant="$1 core;
+    fi
+}
+
+getIdClientFromIdRestaurant () {
+    if [ -z "$1" ]; then
+        echo "Synopsis => getIdClientFromIdRestaurant id_restaurant";
+    elif ! [[ $1 =~ '^[0-9]+$' ]]; then
+        echo "id_restaurant should be an integer";
+    else
+        mysql -e "select id_client from restaurant where id_restaurant="$1 core;
+    fi
+}
