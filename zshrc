@@ -61,6 +61,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
+export IBUS_ENABLE_SYNC_MODE=1
 
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
