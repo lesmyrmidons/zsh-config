@@ -2,10 +2,7 @@ alias ping="ping -c4"
 alias vi='/usr/bin/vim'
 alias hcu='hhvm /usr/local/bin/composer update --no-scripts'
 alias hci='hhvm /usr/local/bin/composer install --no-scripts'
-
-# Alias lafourchette
-alias web1-core.preprod="ssh lafourchette@web1-core.preprod.lafourchette.typhon.net"
-alias web2-core.preprod="ssh lafourchette@web2-core.preprod.lafourchette.typhon.net"
+alias phpunit='php -dzend_extension=xdebug.so $(which phpunit)' 
 
 tailf() {
     tail -f "$*" | ccze -A
@@ -19,22 +16,3 @@ chmodfile() {
     find "$*" -type f -exec chmod 644 {} +
 }
 
-getIdClientFromIdRestaurant () {
-    if [ -z "$1" ]; then
-        echo "Synopsis => getIdClientFromIdRestaurant id_restaurant";
-    elif ! [[ $1 =~ '^[0-9]+$' ]]; then
-        echo "id_restaurant should be an integer";
-    else
-        mysql -e "select id_client from restaurant where id_restaurant="$1 core;
-    fi
-}
-
-getIdClientFromIdRestaurant () {
-    if [ -z "$1" ]; then
-        echo "Synopsis => getIdClientFromIdRestaurant id_restaurant";
-    elif ! [[ $1 =~ '^[0-9]+$' ]]; then
-        echo "id_restaurant should be an integer";
-    else
-        mysql -e "select id_client from restaurant where id_restaurant="$1 core;
-    fi
-}
