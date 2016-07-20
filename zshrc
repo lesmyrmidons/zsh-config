@@ -6,7 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
-DEFAULT_USER="lesmyrmidons"
+DEFAULT_USER="karbouin"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -58,7 +58,7 @@ plugins=(git git-flow git-extras github composer pip svn symfony2 vagrant ruby n
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export IBUS_ENABLE_SYNC_MODE=1
@@ -72,7 +72,7 @@ fi
 # source "/usr/local/bin/virtualenvwrapper.sh"
 # export WORKON_HOME=$HOME/virtual_env
 
-export NVM_DIR="/home/lesmyrmidons/.nvm"
+export NVM_DIR="/home/karbouin/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # # Preferred editor for local and remote sessions
