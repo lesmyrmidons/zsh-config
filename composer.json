@@ -1,0 +1,13 @@
+{
+    "name": "lesmyrmidons/zsh-config",
+    "description": "Configuration Zsh",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin ARBOUIN",
+            "email": "lesmyrmidons@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
