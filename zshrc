@@ -53,12 +53,12 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow git-extras github composer pip svn symfony2 vagrant ruby npm node cap sudo docker)
+plugins=(git git-flow git-extras github composer pip svn symfony2 vagrant ruby npm node cap sudo docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$PATH
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export IBUS_ENABLE_SYNC_MODE=1
@@ -75,9 +75,14 @@ fi
 export NVM_DIR="/home/karbouin/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export GATLING_HOME=/opt/gatling
+export SENSIOLABS_ENABLE_NEW_DIRECTORY_STRUCTURE=true
+export HOMEBREW_GITHUB_API_TOKEN=2ec1d178e7afa2e8246c5b67c33b7e4111c5a647
 # # Preferred editor for local and remote sessions
 #if [[ -n $SSH_CONNECTION ]]; then
 #    export EDITOR='vim'
 #else
 #    export EDITOR='mvim'
 #fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
