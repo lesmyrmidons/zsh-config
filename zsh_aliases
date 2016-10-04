@@ -3,11 +3,7 @@ alias vi='/usr/bin/vim'
 alias hcu='hhvm $(which composer) update --no-scripts'
 alias hci='hhvm $(which composer) install --no-scripts'
 alias phpunit='php -dzend_extension=xdebug.so $(which phpunit)'
-
-
-##### Alias ssh Aramisauto
-alias sshstaging='ssh vagrant@data.karbouin.staging.platforms.aramisauto.com'
-alias sshfrontstaging='ssh vagrant@front.karbouin.staging.platforms.aramisauto.com'
+alias dokrm='docker rmi `docker images | awk '{ print $3; }'`'
 
 tailf() {
     tail -f "$*" | ccze -A
