@@ -73,7 +73,7 @@ fi
 # source "/usr/local/bin/virtualenvwrapper.sh"
 # export WORKON_HOME=$HOME/virtual_env
 
-export NVM_DIR="/home/karbouin/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GATLING_HOME=/opt/gatling
