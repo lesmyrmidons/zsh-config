@@ -22,7 +22,7 @@ make_link_forcibly() {
         if [ -L ${dest} ]; then
             ln -snf ${src} ${dest}
         else
-            ln -s ${src} ${dest}
+            ln -sf ${src} ${dest}
         fi
         echo File symbolic link created: ${dest}
     done
@@ -43,6 +43,7 @@ done
 
 if $flag_force; then
     make_link_forcibly
+    antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 else
     make_link_safely
 fi
