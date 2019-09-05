@@ -1,6 +1,19 @@
+DISABLE_AUTO_UPDATE=true
 
-source ~/.zsh_plugins.sh
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins.txt
 
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+export ZSH_CACHE_DIR="$ZSH/cache"
+
+HISTFILE="${HOME}/.zsh_history"
+HISTSIZE=2000
+SAVEHIST=2000
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+GIT_AUTO_FETCH_INTERVAL=1200
 
 setopt histreduceblanks
 
