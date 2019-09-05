@@ -19,8 +19,8 @@ make_link_forcibly() {
     do
         src="${source_dir}/${file}"
         dest="${dest_dir}/.${file}"
-        if [ -L ${dest} ]; then
-            ln -snf ${src} ${dest}
+        if [ -e ${dest} ]; then
+            ln -sfn ${src} ${dest}
         else
             ln -sf ${src} ${dest}
         fi
