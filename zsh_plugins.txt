@@ -1,0 +1,38 @@
+
+# mkdir && cd 
+caarlos0/zsh-mkc
+zsh-users/zsh-completions
+
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+# theme
+romkatv/powerlevel10k
+
+# oh-my-zsh
+robbyrussell/oh-my-zsh path:plugins/ansible
+robbyrussell/oh-my-zsh path:plugins/common-aliases
+robbyrussell/oh-my-zsh path:plugins/battery
+robbyrussell/oh-my-zsh path:plugins/brew
+robbyrussell/oh-my-zsh path:plugins/capistrano
+robbyrussell/oh-my-zsh path:plugins/colorize
+robbyrussell/oh-my-zsh path:plugins/composer
+robbyrussell/oh-my-zsh path:plugins/docker-compose
+robbyrussell/oh-my-zsh path:plugins/git-flow-avh
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/git-extras
+robbyrussell/oh-my-zsh path:plugins/git-auto-fetch
+robbyrussell/oh-my-zsh path:plugins/httpie
+robbyrussell/oh-my-zsh path:plugins/kubectl
+robbyrussell/oh-my-zsh path:plugins/minikube
+robbyrussell/oh-my-zsh path:plugins/npm
+robbyrussell/oh-my-zsh path:plugins/nvm
+robbyrussell/oh-my-zsh path:plugins/pip
+robbyrussell/oh-my-zsh path:plugins/rvm
+robbyrussell/oh-my-zsh path:plugins/symfony2
+robbyrussell/oh-my-zsh path:plugins/tig
+robbyrussell/oh-my-zsh path:plugins/vagrant-prompt
+robbyrussell/oh-my-zsh path:plugins/vagrant
+robbyrussell/oh-my-zsh path:plugins/virtualenv
+robbyrussell/oh-my-zsh path:plugins/vscode
+robbyrussell/oh-my-zsh path:plugins/yarn
