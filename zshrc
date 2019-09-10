@@ -6,6 +6,8 @@ antibody bundle < ~/.zsh_plugins.txt
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 export ZSH_CACHE_DIR="$ZSH/cache"
 
+source $ZSH/oh-my-zsh.sh
+
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE=2000
 SAVEHIST=2000
@@ -39,6 +41,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export GATLING_HOME=/opt/gatling
 export SENSIOLABS_ENABLE_NEW_DIRECTORY_STRUCTURE=true
+export LC_ALL=fr_FR.UTF-8
 
 # # Preferred editor for local and remote sessions
 #if [[ -n $SSH_CONNECTION ]]; then
