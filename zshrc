@@ -23,7 +23,7 @@ setopt histreduceblanks
 setopt nohup
 
 # Customize to your needs...
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/.symfony/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$PATH
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export IBUS_ENABLE_SYNC_MODE=1
