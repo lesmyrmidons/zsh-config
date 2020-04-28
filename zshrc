@@ -1,10 +1,10 @@
-DISABLE_AUTO_UPDATE=true
-
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+# DISABLE_AUTO_UPDATE=true
 
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 export ZSH_CACHE_DIR="$ZSH/cache"
+
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins.txt
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,14 +34,15 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[ -d "$HOME.rvm/bin" ] && export PATH="$PATH:$HOME/.rvm/bin"
 
-# export WORKON_HOME=$HOME/virtual_env
+[ -d "$HOME/virtual_env" ] && export WORKON_HOME=$HOME/virtual_env
 
-export NVM_DIR="$HOME/.nvm"
+[ -d "$HOME/.nvm" ] && export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GATLING_HOME=/opt/gatling
-export SENSIOLABS_ENABLE_NEW_DIRECTORY_STRUCTURE=true
+# export SENSIOLABS_ENABLE_NEW_DIRECTORY_STRUCTURE=true
 export LC_ALL=fr_FR.UTF-8
 
 # # Preferred editor for local and remote sessions
