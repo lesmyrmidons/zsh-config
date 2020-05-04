@@ -5,6 +5,10 @@ alias hci='hhvm $(which composer) install --no-scripts'
 alias phpunit='php -dzend_extension=xdebug.so $(which phpunit)'
 #alias dokrm='docker rmi `docker images | awk '{ print $3; }'`'
 
+# Alias specific projects
+alias afup='USER=kevin.arbouin make up'
+alias afdn='USER=kevin.arbouin make down'
+
 tailf() {
     tail -f "$*" | ccze -A
 }
