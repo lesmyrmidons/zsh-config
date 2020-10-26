@@ -29,6 +29,9 @@ export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export IBUS_ENABLE_SYNC_MODE=1
 
+# Remove "adds % of end line output"
+export PROMPT_EOL_MARK=''
+
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
