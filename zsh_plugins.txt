@@ -16,10 +16,14 @@ robbyrussell/oh-my-zsh path:plugins/capistrano
 robbyrussell/oh-my-zsh path:plugins/colorize
 robbyrussell/oh-my-zsh path:plugins/composer
 robbyrussell/oh-my-zsh path:plugins/docker-compose
+robbyrussell/oh-my-zsh path:plugins/gcloud
 robbyrussell/oh-my-zsh path:plugins/git-flow-avh
 robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/git-extras
+robbyrussell/oh-my-zsh path:plugins/helm
+robbyrussell/oh-my-zsh path:plugins/history
 robbyrussell/oh-my-zsh path:plugins/httpie
+robbyrussell/oh-my-zsh path:plugins/kubectl
 robbyrussell/oh-my-zsh path:plugins/minikube
 robbyrussell/oh-my-zsh path:plugins/npm
 robbyrussell/oh-my-zsh path:plugins/nvm
@@ -33,6 +37,8 @@ robbyrussell/oh-my-zsh path:plugins/virtualenv
 robbyrussell/oh-my-zsh path:plugins/vscode
 robbyrussell/oh-my-zsh path:plugins/yarn
 robbyrussell/oh-my-zsh path:plugins/sudo
+robbyrussell/oh-my-zsh path:plugins/terraform
+robbyrussell/oh-my-zsh path:plugins/thefuck
 
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
