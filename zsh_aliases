@@ -20,3 +20,7 @@ chmodfile() {
 yq() {
     docker run --rm -i -v "${PWD}":/workdir mikefarah/yq:4.7.1 "$@"
 }
+
+compress() {
+    tar cf - "$*" -P | pv -s $(du -sb "$*" | awk '{print $1}') | gzip > "$*".tar.gz
+}
