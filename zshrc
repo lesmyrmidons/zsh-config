@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 DISABLE_AUTO_UPDATE=true
 
 source ~/.zsh_plugins.sh
@@ -45,6 +52,7 @@ export NVM_DIR="$HOME/.nvm"
 export GATLING_HOME=/opt/gatling
 export SENSIOLABS_ENABLE_NEW_DIRECTORY_STRUCTURE=true
 export LC_ALL=fr_FR.UTF-8
+export PATH="${PATH}:${HOME}/.krew/bin"
 
 # # Preferred editor for local and remote sessions
 #if [[ -n $SSH_CONNECTION ]]; then
@@ -66,3 +74,7 @@ eval "$(pyenv init -)"
 # the following to ~/.zshrc:
 
 eval "$(pyenv virtualenv-init -)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+[ -s "${HOME}/.rd" ] && export PATH="${HOME}/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

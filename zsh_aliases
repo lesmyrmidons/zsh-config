@@ -3,7 +3,9 @@ alias vi='/usr/bin/vim'
 alias hcu='hhvm $(which composer) update --no-scripts'
 alias hci='hhvm $(which composer) install --no-scripts'
 alias phpunit='php -dzend_extension=xdebug.so $(which phpunit)'
+alias konfig='kubectl konfig'
 #alias dokrm='docker rmi `docker images | awk '{ print $3; }'`'
+alias date=gdate
 
 tailf() {
     tail -f "$*" | ccze -A
