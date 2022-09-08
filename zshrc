@@ -31,6 +31,7 @@ setopt nohup
 # Customize to your needs...
 export PATH=$HOME/.symfony/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$PATH
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH=$PATH:$HOME/.local/bin
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export IBUS_ENABLE_SYNC_MODE=1
@@ -48,12 +49,13 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+[ -s "/usr/share/nvm/init-nvm.sh" ] && . "/usr/share/nvm/init-nvm.sh"
 export GATLING_HOME=/opt/gatling
 export SENSIOLABS_ENABLE_NEW_DIRECTORY_STRUCTURE=true
 export LC_ALL=fr_FR.UTF-8
 export PATH="${PATH}:${HOME}/.krew/bin"
 
+export BW_SESSION="tj8RrKaZ8X2nHOMwW4ljedBFqjUVq/WxeNKBiMpim6mNt3aywn0rRvSMDak0aggRjthQzKr7hoB1Nl5B8D3srg=="
 # # Preferred editor for local and remote sessions
 #if [[ -n $SSH_CONNECTION ]]; then
 #    export EDITOR='vim'
