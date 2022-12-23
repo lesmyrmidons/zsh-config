@@ -43,7 +43,6 @@ done
 
 if $flag_force; then
     make_link_forcibly
-    antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 else
     make_link_safely
 fi
