@@ -2,46 +2,49 @@
 caarlos0/zsh-mkc
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
-
-# theme
-romkatv/powerlevel10k
-
-# oh-my-zsh
-robbyrussell/oh-my-zsh
-robbyrussell/oh-my-zsh path:plugins/ansible
-robbyrussell/oh-my-zsh path:plugins/common-aliases
-robbyrussell/oh-my-zsh path:plugins/battery
-robbyrussell/oh-my-zsh path:plugins/brew
-robbyrussell/oh-my-zsh path:plugins/capistrano
-robbyrussell/oh-my-zsh path:plugins/colorize
-robbyrussell/oh-my-zsh path:plugins/composer
-robbyrussell/oh-my-zsh path:plugins/docker-compose
-robbyrussell/oh-my-zsh path:plugins/gcloud
-robbyrussell/oh-my-zsh path:plugins/git-flow-avh
-robbyrussell/oh-my-zsh path:plugins/git
-robbyrussell/oh-my-zsh path:plugins/git-extras
-robbyrussell/oh-my-zsh path:plugins/helm
-robbyrussell/oh-my-zsh path:plugins/history
-robbyrussell/oh-my-zsh path:plugins/httpie
-robbyrussell/oh-my-zsh path:plugins/kubectl
-robbyrussell/oh-my-zsh path:plugins/minikube
-robbyrussell/oh-my-zsh path:plugins/npm
-robbyrussell/oh-my-zsh path:plugins/nvm
-robbyrussell/oh-my-zsh path:plugins/pip
-robbyrussell/oh-my-zsh path:plugins/rvm
-robbyrussell/oh-my-zsh path:plugins/symfony2
-robbyrussell/oh-my-zsh path:plugins/tig
-robbyrussell/oh-my-zsh path:plugins/vagrant-prompt
-robbyrussell/oh-my-zsh path:plugins/vagrant
-robbyrussell/oh-my-zsh path:plugins/virtualenv
-robbyrussell/oh-my-zsh path:plugins/vscode
-robbyrussell/oh-my-zsh path:plugins/yarn
-robbyrussell/oh-my-zsh path:plugins/sudo
-robbyrussell/oh-my-zsh path:plugins/terraform
-robbyrussell/oh-my-zsh path:plugins/thefuck
-
-zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
-zsh-users/zsh-apple-touchbar
-sawadashota/go-task-completions 
+sawadashota/go-task-completions kind:fpath
+
+# theme
+sindresorhus/pure     kind:fpath
+romkatv/powerlevel10k kind:fpath
+
+# annotations are also allowed:
+romkatv/zsh-bench kind:path
+olets/zsh-abbr    kind:defer
+
+# oh-my-zsh
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/ansible
+ohmyzsh/ohmyzsh path:plugins/common-aliases
+ohmyzsh/ohmyzsh path:plugins/battery
+ohmyzsh/ohmyzsh path:plugins/brew
+ohmyzsh/ohmyzsh path:plugins/capistrano
+ohmyzsh/ohmyzsh path:plugins/colorize
+ohmyzsh/ohmyzsh path:plugins/composer
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+ohmyzsh/ohmyzsh path:plugins/gcloud
+ohmyzsh/ohmyzsh path:plugins/git-flow-avh
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/git-extras
+ohmyzsh/ohmyzsh path:plugins/helm
+ohmyzsh/ohmyzsh path:plugins/history
+ohmyzsh/ohmyzsh path:plugins/kubectl
+ohmyzsh/ohmyzsh path:plugins/minikube
+ohmyzsh/ohmyzsh path:plugins/npm
+ohmyzsh/ohmyzsh path:plugins/nvm
+ohmyzsh/ohmyzsh path:plugins/pip
+ohmyzsh/ohmyzsh path:plugins/rvm
+ohmyzsh/ohmyzsh path:plugins/symfony2
+ohmyzsh/ohmyzsh path:plugins/tig
+ohmyzsh/ohmyzsh path:plugins/vagrant-prompt
+ohmyzsh/ohmyzsh path:plugins/vagrant
+ohmyzsh/ohmyzsh path:plugins/virtualenv
+ohmyzsh/ohmyzsh path:plugins/vscode
+ohmyzsh/ohmyzsh path:plugins/yarn
+ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/terraform
+ohmyzsh/ohmyzsh path:plugins/thefuck
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/magic-enter

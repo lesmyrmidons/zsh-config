@@ -1,18 +1,30 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# You can change the names/locations of these if you prefer.
+antidote_dir=${ZDOTDIR:-~}/.antidote
+plugins_txt=${ZDOTDIR:-~}/.zsh_plugins.txt
+static_file=${ZDOTDIR:-~}/.zsh_plugins.zsh
+
+# Clone antidote if necessary and generate a static plugin file.
+if [[ ! $static_file -nt $plugins_txt ]]; then
+  [[ -e $antidote_dir ]] ||
+    git clone --depth=1 https://github.com/mattmc3/antidote.git $antidote_dir
+  (
+    source $antidote_dir/antidote.zsh
+    [[ -e $plugins_txt ]] || touch $plugins_txt
+    antidote bundle <$plugins_txt >$static_file
+  )
 fi
 
-DISABLE_AUTO_UPDATE=true
+# Uncomment this if you want antidote commands like `antidote update` available
+# in your interactive shell session:
+autoload -Uz $antidote_dir/functions/antidote
+# source the static plugins file
+source $static_file
+# autoload -Uz promptinit && promptinit && prompt pure
 
-source ~/.zsh_plugins.sh
+# cleanup
+unset antidote_dir plugins_txt static_file
 
-export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-export ZSH_CACHE_DIR="$ZSH/cache"
-
-source $ZSH/oh-my-zsh.sh
+ZSH=$(antidote path ohmyzsh/ohmyzsh)
 
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE=2000
