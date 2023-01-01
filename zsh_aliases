@@ -5,7 +5,11 @@ alias hci='hhvm $(which composer) install --no-scripts'
 alias phpunit='php -dzend_extension=xdebug.so $(which phpunit)'
 alias konfig='kubectl konfig'
 #alias dokrm='docker rmi `docker images | awk '{ print $3; }'`'
-alias date=gdate
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias date='gdate'
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    alias gdate='date'
+fi
 
 tailf() {
     tail -f "$*" | ccze -A

@@ -2,7 +2,7 @@
 source_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 dest_dir=~
 # ignore_list=(".git" ".gitignore" ".DS_Store")
-file_list=("zsh_aliases" "zshrc" "zsh_plugins.txt")
+file_list=("zsh_aliases" "zshrc" "zsh_plugins.txt" "p10k.zsh")
 
 usage_exit() {
         echo "Usage: $( basename $0) [-h] [-f]" 1>&2

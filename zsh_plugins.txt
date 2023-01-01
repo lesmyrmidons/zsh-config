@@ -6,16 +6,13 @@ zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
 sawadashota/go-task-completions kind:fpath
 
-# theme
-sindresorhus/pure     kind:fpath
-romkatv/powerlevel10k kind:fpath
-
 # annotations are also allowed:
 romkatv/zsh-bench kind:path
 olets/zsh-abbr    kind:defer
 
 # oh-my-zsh
-ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh kind:fpath
+ohmyzsh/ohmyzsh path:plugins/aliases
 ohmyzsh/ohmyzsh path:plugins/ansible
 ohmyzsh/ohmyzsh path:plugins/common-aliases
 ohmyzsh/ohmyzsh path:plugins/battery
@@ -45,6 +42,13 @@ ohmyzsh/ohmyzsh path:plugins/vscode
 ohmyzsh/ohmyzsh path:plugins/yarn
 ohmyzsh/ohmyzsh path:plugins/sudo
 ohmyzsh/ohmyzsh path:plugins/terraform
-ohmyzsh/ohmyzsh path:plugins/thefuck
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/magic-enter
+
+# theme
+sindresorhus/pure kind:fpath
+#caiogondim/bullet-train-oh-my-zsh-theme kind:path
+romkatv/powerlevel10k kind:path
+
+# popular fish-like plugins
+mattmc3/zfunctions

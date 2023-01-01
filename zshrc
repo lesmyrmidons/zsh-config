@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # You can change the names/locations of these if you prefer.
 antidote_dir=${ZDOTDIR:-~}/.antidote
 plugins_txt=${ZDOTDIR:-~}/.zsh_plugins.txt
@@ -14,12 +21,16 @@ if [[ ! $static_file -nt $plugins_txt ]]; then
   )
 fi
 
+[ ! -d "$ZSH_CACHE_DIR/completions" ] && mkdir -p $ZSH_CACHE_DIR/completions
+
 # Uncomment this if you want antidote commands like `antidote update` available
 # in your interactive shell session:
 autoload -Uz $antidote_dir/functions/antidote
 # source the static plugins file
 source $static_file
 # autoload -Uz promptinit && promptinit && prompt pure
+
+source $(antidote path romkatv/powerlevel10k)/powerlevel10k.zsh-theme
 
 # cleanup
 unset antidote_dir plugins_txt static_file
@@ -63,7 +74,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "/usr/share/nvm/init-nvm.sh" ] && . "/usr/share/nvm/init-nvm.sh"
 export GATLING_HOME=/opt/gatling
-export SENSIOLABS_ENABLE_NEW_DIRECTORY_STRUCTURE=true
 export LC_ALL=fr_FR.UTF-8
 export PATH="${PATH}:${HOME}/.krew/bin"
 
