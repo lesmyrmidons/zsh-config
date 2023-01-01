@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # You can change the names/locations of these if you prefer.
-antidote_dir=${ZDOTDIR:-~}/.antidote
+antidote_dir=${ZDOTDIR:-~}/.setup/.antidote
 plugins_txt=${ZDOTDIR:-~}/.zsh_plugins.txt
 static_file=${ZDOTDIR:-~}/.zsh_plugins.zsh
 
