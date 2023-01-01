@@ -1,10 +1,7 @@
 alias ping="ping -c4"
 alias vi='/usr/bin/vim'
-alias hcu='hhvm $(which composer) update --no-scripts'
-alias hci='hhvm $(which composer) install --no-scripts'
 alias phpunit='php -dzend_extension=xdebug.so $(which phpunit)'
 alias konfig='kubectl konfig'
-#alias dokrm='docker rmi `docker images | awk '{ print $3; }'`'
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias date='gdate'
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -12,7 +9,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 fi
 
 tailf() {
-    tail -f "$*" | ccze -A
+    tail -f "$*" | bat
 }
 
 chmoddir() {
@@ -24,7 +21,7 @@ chmodfile() {
 }
 
 yq() {
-    docker run --rm -i -v "${PWD}":/workdir mikefarah/yq:4.7.1 "$@"
+    docker run --rm -i -v "${PWD}":/workdir mikefarah/yq:4.30.6 "$@"
 }
 
 compress() {
