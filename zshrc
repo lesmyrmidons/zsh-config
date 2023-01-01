@@ -33,19 +33,16 @@ autoload -Uz $antidote_dir/functions/antidote
 source $static_file
 # autoload -Uz promptinit && promptinit && prompt pure
 
-
-source $(antidote path romkatv/powerlevel10k)/powerlevel10k.zsh-theme
-
 # cleanup
 unset antidote_dir plugins_txt static_file
 
-
 HISTFILE="${HOME}/.zsh_history"
-HISTSIZE=2000
-SAVEHIST=2000
+HISTSIZE=15000
+SAVEHIST=15000
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+source $(antidote path romkatv/powerlevel10k)/powerlevel10k.zsh-theme
 
 GIT_AUTO_FETCH_INTERVAL=1200
 
