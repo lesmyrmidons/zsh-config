@@ -21,6 +21,11 @@ if [[ ! $static_file -nt $plugins_txt ]]; then
   )
 fi
 
+export ZSH=$(antidote path ohmyzsh/ohmyzsh)
+export ZSH_CACHE_DIR=$ZSH/cache
+
+[ ! -d "$(antidote path ohmyzsh/ohmyzsh)/cache/completions" ] && mkdir -p $(antidote path ohmyzsh/ohmyzsh)/cache/completions
+
 # Uncomment this if you want antidote commands like `antidote update` available
 # in your interactive shell session:
 autoload -Uz $antidote_dir/functions/antidote
@@ -28,15 +33,12 @@ autoload -Uz $antidote_dir/functions/antidote
 source $static_file
 # autoload -Uz promptinit && promptinit && prompt pure
 
-[ ! -d "$(antidote path ohmyzsh/ohmyzsh)/cache/completions" ] && mkdir -p $(antidote path ohmyzsh/ohmyzsh)/cache/completions
 
 source $(antidote path romkatv/powerlevel10k)/powerlevel10k.zsh-theme
 
 # cleanup
 unset antidote_dir plugins_txt static_file
 
-export ZSH=$(antidote path ohmyzsh/ohmyzsh)
-export ZSH_CACHE_DIR=$ZSH/cache
 
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE=2000
