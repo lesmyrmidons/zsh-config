@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # You can change the names/locations of these if you prefer.
-antidote_dir=${ZDOTDIR:-~}/.setup/.antidote
+antidote_dir=${ZDOTDIR:-~}/.antidote
 plugins_txt=${ZDOTDIR:-~}/.zsh_plugins.txt
 static_file=${ZDOTDIR:-~}/.zsh_plugins.zsh
 
@@ -88,9 +88,9 @@ export BW_SESSION="tj8RrKaZ8X2nHOMwW4ljedBFqjUVq/WxeNKBiMpim6mNt3aywn0rRvSMDak0a
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [[ command -v pyenv >/dev/null ]]; then
+if [[ "$(command -v pyenv)" ]]; then
   export PYENV_ROOT="$HOME/.pyenv"
-  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
