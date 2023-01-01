@@ -24,7 +24,7 @@ fi
 export ZSH=$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh
 export ZSH_CACHE_DIR=$ZSH/cache
 
-[ ! -d "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/cache/completions" ] && mkdir -p $HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/cache/completions
+[ ! -d "$ZSH_CACHE_DIR/completions" ] && mkdir -p $ZSH_CACHE_DIR/completions
 
 # Uncomment this if you want antidote commands like `antidote update` available
 # in your interactive shell session:
