@@ -21,7 +21,7 @@ if [[ ! $static_file -nt $plugins_txt ]]; then
   )
 fi
 
-[ ! -d "$ZSH_CACHE_DIR/completions" ] && mkdir -p $ZSH_CACHE_DIR/completions
+[ ! -d "$(antidote path ohmyzsh/ohmyzsh)/cache/completions" ] && mkdir -p $(antidote path ohmyzsh/ohmyzsh)/cache/completions
 
 # Uncomment this if you want antidote commands like `antidote update` available
 # in your interactive shell session:
