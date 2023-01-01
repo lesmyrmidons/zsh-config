@@ -36,6 +36,7 @@ source $(antidote path romkatv/powerlevel10k)/powerlevel10k.zsh-theme
 unset antidote_dir plugins_txt static_file
 
 ZSH=$(antidote path ohmyzsh/ohmyzsh)
+ZSH_CACHE_DIR=$(antidote path ohmyzsh/ohmyzsh)/cache
 
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE=2000
