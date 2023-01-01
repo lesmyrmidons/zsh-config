@@ -21,10 +21,10 @@ if [[ ! $static_file -nt $plugins_txt ]]; then
   )
 fi
 
-export ZSH=$(antidote path ohmyzsh/ohmyzsh)
+export ZSH=$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh
 export ZSH_CACHE_DIR=$ZSH/cache
 
-[ ! -d "$(antidote path ohmyzsh/ohmyzsh)/cache/completions" ] && mkdir -p $(antidote path ohmyzsh/ohmyzsh)/cache/completions
+[ ! -d "$HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/cache/completions" ] && mkdir -p $HOME/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/cache/completions
 
 # Uncomment this if you want antidote commands like `antidote update` available
 # in your interactive shell session:
