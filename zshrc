@@ -65,6 +65,10 @@ export PROMPT_EOL_MARK=''
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
+# Loads aliases specific to the installed environment
+if [ -f ~/.zsh_custom ]; then
+    . ~/.zsh_custum
+fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
