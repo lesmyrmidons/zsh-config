@@ -67,7 +67,7 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 # Loads aliases specific to the installed environment
 if [ -f ~/.zsh_custom ]; then
-    . ~/.zsh_custum
+    . ~/.zsh_custom
 fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
