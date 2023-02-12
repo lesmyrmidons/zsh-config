@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # You can change the names/locations of these if you prefer.
 antidote_dir=${ZDOTDIR:-~}/.antidote
 plugins_txt=${ZDOTDIR:-~}/.zsh_plugins.txt
@@ -15,7 +8,9 @@ if [[ ! $static_file -nt $plugins_txt ]]; then
   [[ -e $antidote_dir ]] ||
     git clone --depth=1 https://github.com/mattmc3/antidote.git $antidote_dir
   (
-    source $antidote_dir/antidote.zsh
+    # Lazy-load antidote.
+    fpath+=(${ZDOTDIR:-~}/.antidote)
+    autoload -Uz $fpath[-1]/antidote
     [[ -e $plugins_txt ]] || touch $plugins_txt
     antidote bundle <$plugins_txt >$static_file
   )
@@ -26,15 +21,19 @@ export ZSH_CACHE_DIR=$ZSH/cache
 
 [ ! -d "$ZSH_CACHE_DIR/completions" ] && mkdir -p $ZSH_CACHE_DIR/completions
 
-# Uncomment this if you want antidote commands like `antidote update` available
-# in your interactive shell session:
-autoload -Uz $antidote_dir/functions/antidote
-# source the static plugins file
-source $static_file
-# autoload -Uz promptinit && promptinit && prompt pure
+# Lazy-load antidote.
+fpath+=(${ZDOTDIR:-~}/.antidote)
+autoload -Uz $fpath[-1]/antidote
 
-# cleanup
-unset antidote_dir plugins_txt static_file
+#autoload -Uz promptinit && promptinit
+
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE=15000
@@ -102,3 +101,9 @@ fi
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 [ -s "${HOME}/.rd" ] && export PATH="${HOME}/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# source the static plugins file
+source $static_file
+
+# cleanup
+unset antidote_dir plugins_txt static_file
