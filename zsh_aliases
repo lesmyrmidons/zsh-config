@@ -2,7 +2,6 @@ alias ping="ping -c4"
 alias vi='/usr/bin/vim'
 alias phpunit='php -dzend_extension=xdebug.so $(which phpunit)'
 alias konfig='kubectl konfig'
-alias task='gtask'
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias date='gdate'
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then

@@ -106,4 +106,7 @@ fi
 source $static_file
 
 # cleanup
-unset antidote_dir plugins_txt static_file
+unset antidote_dir plugins_txt static_fileexport
+
+PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
