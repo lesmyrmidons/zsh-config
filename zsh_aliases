@@ -28,3 +28,9 @@ yq() {
 compress() {
     tar cf - "$*" -P | pv -s $(du -sb "$*" | awk '{print $1}') | gzip > "$*".tar.gz
 }
+
+packer() {
+    docker run \
+        -v `pwd`:/workspace -w /workspace \
+        -e PACKER_PLUGIN_PATH=/workspace/.packer.d/plugins hashicorp/packer:1.11.2 "$*"
+}
