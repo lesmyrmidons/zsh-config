@@ -69,13 +69,11 @@ if [ -f ~/.zsh_custom ]; then
     . ~/.zsh_custom
 fi
 
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# export WORKON_HOME=$HOME/virtual_env
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "/usr/share/nvm/init-nvm.sh" ] && . "/usr/share/nvm/init-nvm.sh"
+if [ -f $HOME/.nvm ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "/usr/share/nvm/init-nvm.sh" ] && . "/usr/share/nvm/init-nvm.sh"
+fi
 export GATLING_HOME=/opt/gatling
 export LC_ALL=fr_FR.UTF-8
 export PATH="${PATH}:${HOME}/.krew/bin"
