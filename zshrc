@@ -25,8 +25,8 @@ export ZSH_CACHE_DIR=$ZSH/cache
 fpath+=(${ZDOTDIR:-~}/.antidote)
 autoload -Uz $fpath[-1]/antidote
 
-#autoload -Uz promptinit && promptinit
-
+# Initialize completion system before p10k instant prompt to avoid spurious output
+autoload -Uz compinit && compinit -C
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -100,11 +100,14 @@ fi
 [ -s "${HOME}/.rd" ] && export PATH="${HOME}/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
+# Initialize completion system before loading plugins
+autoload -Uz compinit && compinit
+
 # source the static plugins file
 source $static_file
 
 # cleanup
-unset antidote_dir plugins_txt static_fileexport
+unset antidote_dir plugins_txt static_file
 
 PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
